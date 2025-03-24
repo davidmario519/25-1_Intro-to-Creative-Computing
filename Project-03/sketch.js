@@ -18,7 +18,7 @@ function draw() {
     } else {
         background(0, 0, 0, 30);
     }
-
+      
     let targetX = mouseX;
     let targetY = mouseY;
 
@@ -45,3 +45,9 @@ function drawGradient(x, y) {
         h = (h + 1) % 360;
     }
 }
+
+function keyPressed() {
+    if (key === 's' || key === 'S') {
+      saveCanvas('myCanvas', 'png');
+    }
+  }
